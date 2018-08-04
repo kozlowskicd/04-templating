@@ -14,6 +14,16 @@ function Article (rawDataObj) {
 Article.prototype.toHtml = function() {
   // TODO: Use Handlebars to render your articles. Get your template from the DOM and "compile" your template with Handlebars.
 
+  // let template = $('.template').html();
+  // let compileTemplate = Handlebars.compile(template);
+  // compileTemplate(this);
+  // rawData.forEach(articleObject => {
+  //   articles.push(new Article(articleObject));
+  // });
+  // articles.forEach(function(articleObject2){
+  //   $('#template').append(articleObject2.toHtml());
+  // });
+
   // REVIEW: If your template will use properties that aren't on the object yet, add them.
   // Since your template can't hold any JS logic, we need to execute the logic here.
   // The result is added to the object as a new property, which can then be referenced by key in the template.
@@ -34,8 +44,8 @@ Article.prototype.toHtml = function() {
 
 };
 
-// COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
-// PUT YOUR RESPONSE HERE
+// COMMENTED: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
+// Arrow functions do not need parantheses if there is only one parameter to the function.  Parantheses are required if there are none or two or more of them.
 rawData.sort((a,b) => {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
