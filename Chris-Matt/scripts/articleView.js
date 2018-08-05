@@ -5,7 +5,7 @@ let articleView = {};
 // TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
+// Arrow functions do not have their own "this" value, or their own argument objects. The value of "this" inside an arrow function is always inherited from the containing scope. Arrow functions are not replacements for the "function" keyword. According to MSDN: "Refactoring is the process of modifying code in order to make it easier to maintain, understand, and extend, but without changing its behavior." With this in mind, we only wanted to refactor code if it improved the overall readability of our work. 
 
 articleView.populateFilters = function() {
   $('article').each(function() {
